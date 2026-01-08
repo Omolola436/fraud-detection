@@ -1,0 +1,170 @@
+Build a Fraud Detection & Prevention Dashboard UI using:
+
+Python (Flask) for the application server
+
+HTML + CSS (Tailwind CSS) for layout and styling
+
+Vanilla JavaScript for frontend logic (NO TypeScript, NO React)
+
+⚠️ Do NOT use TypeScript, React, Next.js, or any frontend framework.
+
+This project is UI/UX ONLY.
+The real ML backend is being built separately and will be connected later.
+
+Project Purpose
+
+This dashboard is for banks, fintechs, and e-commerce companies to:
+
+Monitor transactions
+
+View fraud risk scores
+
+See model health and influence
+
+Branding
+
+Primary brand color: Orange
+
+Secondary colors: Dark gray / black / white
+
+Orange is used only for:
+
+Alerts
+
+High-risk indicators
+
+Primary buttons
+
+Pages to Build
+
+Use Flask routes and HTML templates for:
+
+Dashboard (overview)
+
+Transactions
+
+Alerts
+
+System Health / Model Health
+
+Settings
+
+Dashboard Layout
+
+Left sidebar navigation with icons:
+
+Overview
+
+Transactions
+
+Alerts
+
+System Health
+
+Settings
+
+Top header:
+
+Page title
+
+Export Report button
+
+Refresh Model Status button
+
+Main dashboard content:
+
+Metric cards:
+
+Total Transactions
+
+Fraud Rate
+
+Approval Rate
+
+Active Alerts
+
+Live Transaction Feed table:
+
+Time
+
+Merchant
+
+Amount
+
+Risk Score (color-coded)
+
+Status
+
+Model Health panel:
+
+Model name and version
+
+Accuracy
+
+Drift status
+
+UX Rules
+
+Metric cards must be clickable
+
+Table rows must be clickable
+
+High-risk items must visually stand out
+
+Hover effects for clickable items
+
+Tooltips for:
+
+Risk score
+
+Drift score
+
+Fraud rate
+
+Technical Rules
+
+Use Flask + Jinja2 templates
+
+Use Chart.js for charts
+
+Use mock JSON data for now
+
+Frontend must use vanilla JavaScript fetch()
+
+Prepare the frontend to later connect to a real backend API
+
+Output Required
+
+A working Flask project
+
+Clean folder structure
+
+No TypeScript anywhere
+
+No React
+
+Code readable by someone who knows Python and JavaScript only
+
+✅ EXPECTED PROJECT STRUCTURE (VERY IMPORTANT)
+
+Tell Replit to follow this exactly:
+
+fraud_ui/
+├── app.py
+├── templates/
+│   ├── base.html
+│   ├── dashboard.html
+│   ├── transactions.html
+│   ├── alerts.html
+│   ├── system_health.html
+│   └── settings.html
+├── static/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── dashboard.js
+│   └── charts/
+│       └── charts.js
+├── data/
+│   └── mock_data.json
+└── requirements.txt
