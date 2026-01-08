@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="grid gap-6">
+    {% for i in range(1, 4) %}
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-l-4 {% if i == 2 %}border-l-red-500 border-gray-100{% else %}border-l-orange-500 border-gray-100{% endif %}">
+        <div class="flex justify-between items-start">
+            <div>
+                <h3 class="text-lg font-bold text-gray-900 mb-1">
+                    {% if i == 1 %}Unusual High Value Transaction{% endif %}
+                    {% if i == 2 %}Location Mismatch Detected{% endif %}
+                    {% if i == 3 %}Velocity Check Failed{% endif %}
+                </h3>
+                <p class="text-gray-600 mb-4">
+                    {% if i == 1 %}Transaction of $4,500.00 exceeds user's average by 400%.{% endif %}
+                    {% if i == 2 %}Transaction originated from Lagos, Nigeria, but user last login was New York, USA.{% endif %}
+                    {% if i == 3 %}5 transactions attempted in 2 minutes.{% endif %}
+                </p>
+                <div class="flex gap-3">
+                    <button class="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800">Investigate</button>
+                    <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50">Dismiss</button>
+                </div>
+            </div>
+            <span class="text-sm text-gray-400">10 mins ago</span>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
