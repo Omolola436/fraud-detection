@@ -14,7 +14,7 @@
                 extend: {
                     colors: {
                         brand: {
-                            orange: '#F97316',
+                            orange: '#F36000',
                             dark: '#1F2937',
                         }
                     }
@@ -28,8 +28,8 @@
         <!-- Sidebar -->
         <aside class="w-64 bg-gray-900 text-white flex flex-col">
             <div class="p-6">
-                <h1 class="text-2xl font-bold text-orange-500 flex items-center gap-2">
-                    <i class="ph ph-shield-check"></i> FraudGuard
+                <h1 class="text-2xl font-bold text-brand-orange">
+                    FraudGuard
                 </h1>
             </div>
             <nav class="flex-1 px-4 space-y-2">
@@ -52,11 +52,11 @@
             <div class="p-4 border-t border-gray-800">
                 <div class="flex items-center gap-3">
                     <div class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center">
-                        <span class="text-sm font-bold">JD</span>
+                        <span class="text-sm font-bold">OD</span>
                     </div>
                     <div>
-                        <p class="text-sm font-medium">Jane Doe</p>
-                        <p class="text-xs text-gray-500">Risk Analyst</p>
+                        <p class="text-sm font-medium">Omolola Dada</p>
+                        <p class="text-xs text-gray-500">Security Team</p>
                     </div>
                 </div>
             </div>
@@ -78,14 +78,14 @@
                     <button onclick="alert('Exporting report...')" class="px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
                         Export Report
                     </button>
-                    <button onclick="alert('Refreshing model...')" class="px-4 py-2 bg-orange-500 text-white rounded-lg text-sm font-medium hover:bg-orange-600 transition-colors flex items-center gap-2">
+                    <button onclick="alert('Refreshing model...')" class="px-4 py-2 bg-brand-orange text-white rounded-lg text-sm font-medium hover:bg-[#D95500] transition-colors flex items-center gap-2">
                         <i class="ph ph-arrows-clockwise"></i> Refresh Model
                     </button>
                 </div>
             </header>
 
             <!-- Scrollable Content -->
-            <div class="flex-1 overflow-auto bg-gray-50 p-8">
+            <div class="flex-1 overflow-auto bg-gray-50 p-8 watermark">
                 {% block content %}{% endblock %}
             </div>
         </main>

@@ -1,8 +1,40 @@
-/* Custom styles if needed beyond Tailwind */
-.hover-elevate {
-    transition: transform 0.2s, box-shadow 0.2s;
+/* =========================
+   Brand Colors
+========================= */
+:root {
+    --brand-orange: #F36000;
 }
+
+/* =========================
+   Watermark Background
+========================= */
+.watermark {
+    position: relative;
+}
+
+.watermark::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/static/images/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px; /* adjust size if needed */
+    opacity: 0.05; /* subtle watermark */
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* =========================
+   Hover Elevation Effect
+========================= */
+.hover-elevate {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
 .hover-elevate:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }

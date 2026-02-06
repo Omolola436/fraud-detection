@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Churn Shield</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-header">
+            <h1 class="text-3xl font-bold text-orange-600">FraudGuard</h1>
+            <p class="text-gray-500">Customer Retention Platform</p>
+        </div>
+        
+        <form method="POST" class="login-form space-y-4">
+            {% if error %}
+            <div class="error-message bg-red-50 text-red-600 p-3 rounded-lg text-sm">{{ error }}</div>
+            {% endif %}
+            
+            <div class="form-group text-left">
+                <label class="block text-sm font-medium mb-1">Full Name</label>
+                <input type="text" name="username" placeholder="Enter your full name" class="w-full p-2 border rounded-lg" required>
+            </div>
+
+            <div class="form-group text-left">
+                <label class="block text-sm font-medium mb-1">Password</label>
+                <input type="password" name="password" placeholder="••••••••" class="w-full p-2 border rounded-lg" required>
+            </div>
+            
+            <div class="form-group text-left">
+                <label class="block text-sm font-medium mb-1">Select Role</label>
+                <select name="role" class="w-full p-2 border rounded-lg" required>
+                    <option value="" disabled selected>Select your role...</option>
+                    <option value="executive">Executive</option>
+                    <option value="operations">Operations / Customer Success</option>
+                    <option value="ml_engineer">ML Engineer</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn-primary w-full bg-orange-600 text-white p-2 rounded-lg font-semibold hover:bg-orange-700">Login</button>
+            
+            <div class="text-sm mt-4">
+                <a href="{{ url_for('password_reset') }}" class="text-orange-600 hover:underline">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
